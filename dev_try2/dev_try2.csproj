@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC70CFC9-2E26-4DE3-9384-283AA17343D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>dev_try2</RootNamespace>
+    <AssemblyName>dev_try2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.UI, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2.Wizard, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Controls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Version, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributeTable.Designer.cs">
+      <DependentUpon>AttributeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CenterInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CenterInfo.Designer.cs">
+      <DependentUpon>CenterInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorHelper.cs" />
+    <Compile Include="DataLoad.cs" />
+    <Compile Include="DataOperator.cs" />
+    <Compile Include="IDW.cs" />
+    <Compile Include="IntroductionHGB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroductionHGB.Designer.cs">
+      <DependentUpon>IntroductionHGB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapAnalysis.cs" />
+    <Compile Include="MapComposer.cs" />
+    <Compile Include="PrecipitationRank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrecipitationRank.Designer.cs">
+      <DependentUpon>PrecipitationRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query.cs" />
+    <Compile Include="QueryByAttribute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryByAttribute.Designer.cs">
+      <DependentUpon>QueryByAttribute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegionPrecipitation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegionPrecipitation.Designer.cs">
+      <DependentUpon>RegionPrecipitation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Render.cs" />
+    <Compile Include="RibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RibbonForm.Designer.cs">
+      <DependentUpon>RibbonForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AttributeTable.resx">
+      <DependentUpon>AttributeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CenterInfo.resx">
+      <DependentUpon>CenterInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroductionHGB.resx">
+      <DependentUpon>IntroductionHGB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrecipitationRank.resx">
+      <DependentUpon>PrecipitationRank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QueryByAttribute.resx">
+      <DependentUpon>QueryByAttribute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegionPrecipitation.resx">
+      <DependentUpon>RegionPrecipitation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RibbonForm.resx">
+      <DependentUpon>RibbonForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="esriCarto">
+      <Guid>{45AC68FF-DEFF-4884-B3A9-7D882EDCAEF1}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriDataSourcesFile">
+      <Guid>{1CE6AC65-43F5-4529-8FC0-D7ED298E4F1A}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriDataSourcesGDB">
+      <Guid>{4A037613-879A-484D-AF82-0802947C627B}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriDataSourcesNetCDF">
+      <Guid>{28ED84CD-FB06-41A0-9A55-E196441D169A}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriDataSourcesRaster">
+      <Guid>{8F0541A3-D5BE-4B3F-A8D9-062D5579E19B}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriDisplay">
+      <Guid>{59FCCD31-434C-4017-BDEF-DB4B7EDC9CE0}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGeoAnalyst">
+      <Guid>{5C54042B-B2ED-4889-8C40-2D89C19DB41D}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGeoDatabase">
+      <Guid>{0475BDB1-E5B2-4CA2-9127-B4B1683E70C2}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGeoDatabaseDistributed">
+      <Guid>{A7C74158-1062-4664-B404-8694D490FCD1}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGeoDatabaseExtensions">
+      <Guid>{7BA654FE-F55E-4EE5-8CF2-FAEFFBC04A61}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGeometry">
+      <Guid>{C4B094C2-FF32-4FA1-ABCB-7820F8D6FB68}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGeoprocessing">
+      <Guid>{C031A050-82C6-4F8F-8836-5692631CFFE6}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriGISClient">
+      <Guid>{746F6817-89BB-4490-9829-83CA25FD505A}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriOutput">
+      <Guid>{7DB92CEC-CB65-420A-8737-FCD0722FD436}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriServer">
+      <Guid>{18F2FC71-6B30-45B9-B101-037A8B868B66}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriSpatialAnalyst">
+      <Guid>{62922975-992A-4C4F-BD20-F7F7113A9299}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriSystem">
+      <Guid>{5E1F7BC3-67C5-4AEE-8EC6-C4B73AAC42ED}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="esriSystemUI">
+      <Guid>{4ECCA6E2-B16B-4ACA-BD17-E74CAE4C150A}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>2</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole1">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="stdole2">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zchart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\columnchart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\center.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\center1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impact.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\route.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rain2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\begin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\draw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
